@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package proto;
+
+service Eth2stats {
+    rpc Connect (ConnectRequest) returns (ConnectResponse) {}
+    rpc ChainHead (ChainHeadRequest) returns (ChainHeadResponse) {}
+    rpc Heartbeat (HeartbeatRequest) returns (HeartbeatResponse) {}
+}
+
+message ConnectRequest {
+    string name = 1;
+    string version = 2;
+
+    // Genesis time unix format
+    int64 genesisTime = 3;
+}
+
+enum Status {
+    OK = 0;
+    ERROR = 1;
+}
+
+message ConnectResponse {
+    string token = 1;
+    Status status = 2;
+    string message = 3;
+}
+
+message ChainHeadRequest {
+    uint64 headSlot = 1;
+    string headBlockRoot = 2;
+    uint64 finalizedSlot = 3;
+    string finalizedBlockRoot = 4;
+    uint64 justifiedSlot = 5;
+    string justifiedBlockRoot = 6;
+}
+
+message ChainHeadResponse {
+    Status status = 1;
+    string message = 2;
+}
+
+message HeartbeatRequest {
+
+}
+
+message HeartbeatResponse {
+    Status status = 1;
+    string message = 2;
+}
