@@ -54,6 +54,7 @@ message HeartbeatResponse {
 
 message TelemetryRequest {
     int64 peers = 1;
+    bool syncing = 2;
 }
 
 message TelemetryResponse {
