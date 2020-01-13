@@ -8,6 +8,8 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status "google.golang.org/grpc/status"
 	math "math"
 )
 
@@ -571,6 +573,23 @@ type Eth2StatsServer interface {
 	ChainHead(context.Context, *ChainHeadRequest) (*ChainHeadResponse, error)
 	Heartbeat(context.Context, *HeartbeatRequest) (*HeartbeatResponse, error)
 	Telemetry(context.Context, *TelemetryRequest) (*TelemetryResponse, error)
+}
+
+// UnimplementedEth2StatsServer can be embedded to have forward compatible implementations.
+type UnimplementedEth2StatsServer struct {
+}
+
+func (*UnimplementedEth2StatsServer) Connect(ctx context.Context, req *ConnectRequest) (*ConnectResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Connect not implemented")
+}
+func (*UnimplementedEth2StatsServer) ChainHead(ctx context.Context, req *ChainHeadRequest) (*ChainHeadResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ChainHead not implemented")
+}
+func (*UnimplementedEth2StatsServer) Heartbeat(ctx context.Context, req *HeartbeatRequest) (*HeartbeatResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Heartbeat not implemented")
+}
+func (*UnimplementedEth2StatsServer) Telemetry(ctx context.Context, req *TelemetryRequest) (*TelemetryResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Telemetry not implemented")
 }
 
 func RegisterEth2StatsServer(s *grpc.Server, srv Eth2StatsServer) {
