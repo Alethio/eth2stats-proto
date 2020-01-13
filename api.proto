@@ -6,6 +6,7 @@ service Eth2stats {
     rpc Connect (ConnectRequest) returns (ConnectResponse) {}
     rpc ChainHead (ChainHeadRequest) returns (ChainHeadResponse) {}
     rpc Heartbeat (HeartbeatRequest) returns (HeartbeatResponse) {}
+    rpc Telemetry (TelemetryRequest) returns (TelemetryResponse) {}
 }
 
 message ConnectRequest {
@@ -46,6 +47,16 @@ message HeartbeatRequest {
 }
 
 message HeartbeatResponse {
+    Status status = 1;
+    string message = 2;
+}
+
+
+message TelemetryRequest {
+    int64 peers = 1;
+}
+
+message TelemetryResponse {
     Status status = 1;
     string message = 2;
 }
