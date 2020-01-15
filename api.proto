@@ -56,6 +56,7 @@ message TelemetryRequest {
     int64 peers = 1;
     bool syncing = 2;
     int64 attestationsInPool = 3;
+    int64 memoryUsage = 4;
 }
 
 message TelemetryResponse {
