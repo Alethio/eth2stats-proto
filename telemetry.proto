@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package proto;
+
+import "api.proto";
+
+service Telemetry {
+    rpc Peers (PeersRequest) returns (DefaultResponse) {}
+    rpc Attestations (AttestationsRequest) returns (DefaultResponse) {}
+    rpc Syncing (SyncingRequest) returns (DefaultResponse) {}
+    rpc MemoryUsage (MemoryUsageRequest) returns (DefaultResponse) {}
+}
+
+message PeersRequest {
+    int64 peers = 1;
+}
+
+message SyncingRequest {
+    bool syncing = 1;
+}
+
+message AttestationsRequest {
+    int64 attestationsInPool = 1;
+}
+
+message MemoryUsageRequest {
+    int64 memoryUsage = 1;
+}
+
+message DefaultResponse {
+    Status status = 1;
+    string message = 2;
+}

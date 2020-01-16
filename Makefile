@@ -1,2 +1,2 @@
 proto:
-	protoc -I ./ ./api.proto --go_out=plugins=grpc:./
+	protoc -I ./ --go_out=plugins=grpc:./ ./*.proto

@@ -474,209 +474,6 @@ func (m *TelemetryResponse) GetMessage() string {
 	return ""
 }
 
-type PeersRequest struct {
-	Peers                int64    `protobuf:"varint,1,opt,name=peers,proto3" json:"peers,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PeersRequest) Reset()         { *m = PeersRequest{} }
-func (m *PeersRequest) String() string { return proto.CompactTextString(m) }
-func (*PeersRequest) ProtoMessage()    {}
-func (*PeersRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_00212fb1f9d3bf1c, []int{8}
-}
-
-func (m *PeersRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PeersRequest.Unmarshal(m, b)
-}
-func (m *PeersRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PeersRequest.Marshal(b, m, deterministic)
-}
-func (m *PeersRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PeersRequest.Merge(m, src)
-}
-func (m *PeersRequest) XXX_Size() int {
-	return xxx_messageInfo_PeersRequest.Size(m)
-}
-func (m *PeersRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_PeersRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PeersRequest proto.InternalMessageInfo
-
-func (m *PeersRequest) GetPeers() int64 {
-	if m != nil {
-		return m.Peers
-	}
-	return 0
-}
-
-type SyncingRequest struct {
-	Syncing              bool     `protobuf:"varint,1,opt,name=syncing,proto3" json:"syncing,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *SyncingRequest) Reset()         { *m = SyncingRequest{} }
-func (m *SyncingRequest) String() string { return proto.CompactTextString(m) }
-func (*SyncingRequest) ProtoMessage()    {}
-func (*SyncingRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_00212fb1f9d3bf1c, []int{9}
-}
-
-func (m *SyncingRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SyncingRequest.Unmarshal(m, b)
-}
-func (m *SyncingRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SyncingRequest.Marshal(b, m, deterministic)
-}
-func (m *SyncingRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SyncingRequest.Merge(m, src)
-}
-func (m *SyncingRequest) XXX_Size() int {
-	return xxx_messageInfo_SyncingRequest.Size(m)
-}
-func (m *SyncingRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_SyncingRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_SyncingRequest proto.InternalMessageInfo
-
-func (m *SyncingRequest) GetSyncing() bool {
-	if m != nil {
-		return m.Syncing
-	}
-	return false
-}
-
-type AttestationsRequest struct {
-	AttestationsInPool   int64    `protobuf:"varint,1,opt,name=attestationsInPool,proto3" json:"attestationsInPool,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *AttestationsRequest) Reset()         { *m = AttestationsRequest{} }
-func (m *AttestationsRequest) String() string { return proto.CompactTextString(m) }
-func (*AttestationsRequest) ProtoMessage()    {}
-func (*AttestationsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_00212fb1f9d3bf1c, []int{10}
-}
-
-func (m *AttestationsRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_AttestationsRequest.Unmarshal(m, b)
-}
-func (m *AttestationsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_AttestationsRequest.Marshal(b, m, deterministic)
-}
-func (m *AttestationsRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_AttestationsRequest.Merge(m, src)
-}
-func (m *AttestationsRequest) XXX_Size() int {
-	return xxx_messageInfo_AttestationsRequest.Size(m)
-}
-func (m *AttestationsRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_AttestationsRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_AttestationsRequest proto.InternalMessageInfo
-
-func (m *AttestationsRequest) GetAttestationsInPool() int64 {
-	if m != nil {
-		return m.AttestationsInPool
-	}
-	return 0
-}
-
-type MemoryUsageRequest struct {
-	MemoryUsage          int64    `protobuf:"varint,1,opt,name=memoryUsage,proto3" json:"memoryUsage,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *MemoryUsageRequest) Reset()         { *m = MemoryUsageRequest{} }
-func (m *MemoryUsageRequest) String() string { return proto.CompactTextString(m) }
-func (*MemoryUsageRequest) ProtoMessage()    {}
-func (*MemoryUsageRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_00212fb1f9d3bf1c, []int{11}
-}
-
-func (m *MemoryUsageRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_MemoryUsageRequest.Unmarshal(m, b)
-}
-func (m *MemoryUsageRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_MemoryUsageRequest.Marshal(b, m, deterministic)
-}
-func (m *MemoryUsageRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MemoryUsageRequest.Merge(m, src)
-}
-func (m *MemoryUsageRequest) XXX_Size() int {
-	return xxx_messageInfo_MemoryUsageRequest.Size(m)
-}
-func (m *MemoryUsageRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_MemoryUsageRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_MemoryUsageRequest proto.InternalMessageInfo
-
-func (m *MemoryUsageRequest) GetMemoryUsage() int64 {
-	if m != nil {
-		return m.MemoryUsage
-	}
-	return 0
-}
-
-type DefaultResponse struct {
-	Status               Status   `protobuf:"varint,1,opt,name=status,proto3,enum=proto.Status" json:"status,omitempty"`
-	Message              string   `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *DefaultResponse) Reset()         { *m = DefaultResponse{} }
-func (m *DefaultResponse) String() string { return proto.CompactTextString(m) }
-func (*DefaultResponse) ProtoMessage()    {}
-func (*DefaultResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_00212fb1f9d3bf1c, []int{12}
-}
-
-func (m *DefaultResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_DefaultResponse.Unmarshal(m, b)
-}
-func (m *DefaultResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_DefaultResponse.Marshal(b, m, deterministic)
-}
-func (m *DefaultResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DefaultResponse.Merge(m, src)
-}
-func (m *DefaultResponse) XXX_Size() int {
-	return xxx_messageInfo_DefaultResponse.Size(m)
-}
-func (m *DefaultResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_DefaultResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_DefaultResponse proto.InternalMessageInfo
-
-func (m *DefaultResponse) GetStatus() Status {
-	if m != nil {
-		return m.Status
-	}
-	return Status_OK
-}
-
-func (m *DefaultResponse) GetMessage() string {
-	if m != nil {
-		return m.Message
-	}
-	return ""
-}
-
 func init() {
 	proto.RegisterEnum("proto.Status", Status_name, Status_value)
 	proto.RegisterType((*ConnectRequest)(nil), "proto.ConnectRequest")
@@ -687,56 +484,43 @@ func init() {
 	proto.RegisterType((*HeartbeatResponse)(nil), "proto.HeartbeatResponse")
 	proto.RegisterType((*TelemetryRequest)(nil), "proto.TelemetryRequest")
 	proto.RegisterType((*TelemetryResponse)(nil), "proto.TelemetryResponse")
-	proto.RegisterType((*PeersRequest)(nil), "proto.PeersRequest")
-	proto.RegisterType((*SyncingRequest)(nil), "proto.SyncingRequest")
-	proto.RegisterType((*AttestationsRequest)(nil), "proto.AttestationsRequest")
-	proto.RegisterType((*MemoryUsageRequest)(nil), "proto.MemoryUsageRequest")
-	proto.RegisterType((*DefaultResponse)(nil), "proto.DefaultResponse")
 }
 
 func init() { proto.RegisterFile("api.proto", fileDescriptor_00212fb1f9d3bf1c) }
 
 var fileDescriptor_00212fb1f9d3bf1c = []byte{
-	// 609 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x94, 0xb9, 0x4f, 0x1b, 0x4f,
-	0x14, 0xc7, 0xbd, 0xbe, 0x60, 0x1f, 0x97, 0x7f, 0x0f, 0x7e, 0x89, 0xe3, 0x34, 0x68, 0x45, 0x24,
-	0x44, 0x41, 0x41, 0x24, 0x0a, 0xaa, 0x84, 0x43, 0x22, 0x8a, 0x22, 0xd0, 0x40, 0xfa, 0x0c, 0xf0,
-	0xc0, 0x1b, 0xec, 0x19, 0x67, 0x67, 0x1c, 0x89, 0x54, 0x29, 0x53, 0xa5, 0xca, 0x1f, 0x1c, 0xcd,
-	0xb1, 0xe3, 0x3d, 0x0c, 0x4a, 0x41, 0x65, 0xbf, 0x63, 0x3f, 0x6f, 0xde, 0x77, 0xbf, 0xb3, 0x10,
-	0xf3, 0x49, 0xba, 0x3b, 0xc9, 0xa4, 0x96, 0xd8, 0xb1, 0x3f, 0xc9, 0x17, 0x58, 0x3d, 0x92, 0x42,
-	0xd0, 0xb5, 0x66, 0xf4, 0x6d, 0x4a, 0x4a, 0x23, 0x42, 0x5b, 0xf0, 0x31, 0xf5, 0xa3, 0xcd, 0x68,
-	0x3b, 0x66, 0xf6, 0x3f, 0xf6, 0x61, 0xe1, 0x3b, 0x65, 0x2a, 0x95, 0xa2, 0xdf, 0xb4, 0xe9, 0x3c,
-	0xc4, 0x4d, 0x58, 0xba, 0x23, 0x41, 0x2a, 0x55, 0x97, 0xe9, 0x98, 0xfa, 0xad, 0xcd, 0x68, 0xbb,
-	0xc5, 0x8a, 0xa9, 0x64, 0x08, 0x6b, 0x61, 0x82, 0x9a, 0x48, 0xa1, 0x08, 0x37, 0xa0, 0xa3, 0xe5,
-	0x3d, 0x09, 0x3f, 0xc3, 0x05, 0xf8, 0x06, 0xba, 0x4a, 0x73, 0x3d, 0x55, 0x76, 0xc6, 0xea, 0xde,
-	0x8a, 0x3b, 0xe9, 0xee, 0x85, 0x4d, 0x32, 0x5f, 0x34, 0x67, 0x19, 0x93, 0x52, 0xfc, 0xce, 0x4d,
-	0x8b, 0x59, 0x1e, 0x26, 0x3f, 0x9b, 0xd0, 0x3b, 0x1a, 0xf2, 0x54, 0x9c, 0x12, 0xbf, 0xc9, 0xd7,
-	0x19, 0xc0, 0xe2, 0x90, 0xf8, 0xcd, 0xc5, 0x48, 0x6a, 0x3b, 0xae, 0xcd, 0x42, 0x8c, 0x5b, 0xb0,
-	0x62, 0xfe, 0x1f, 0x8e, 0xe4, 0xf5, 0x3d, 0x93, 0x52, 0xfb, 0xe5, 0xca, 0x49, 0xd3, 0x75, 0x9b,
-	0x0a, 0x3e, 0x4a, 0x7f, 0x90, 0xc3, 0xb4, 0x2c, 0xa6, 0x9c, 0xc4, 0x5d, 0xc0, 0x90, 0x98, 0x01,
-	0xdb, 0x16, 0x38, 0xa7, 0x62, 0xa8, 0x5f, 0xa7, 0x4a, 0xa7, 0xb7, 0xa9, 0xa7, 0x76, 0x1c, 0xb5,
-	0x94, 0x34, 0xd4, 0x90, 0x98, 0x51, 0xbb, 0x8e, 0x5a, 0xaf, 0x24, 0x97, 0xf0, 0x5f, 0x41, 0x01,
-	0x2f, 0xf7, 0x4c, 0xd8, 0xe8, 0x1f, 0x85, 0x6d, 0x96, 0x85, 0x45, 0xe8, 0x9d, 0x12, 0xcf, 0xf4,
-	0x15, 0xf1, 0xdc, 0x26, 0x66, 0x52, 0x21, 0xf7, 0x5c, 0x93, 0xfe, 0x44, 0xd0, 0xbb, 0xa4, 0x11,
-	0x8d, 0x49, 0x67, 0x0f, 0xf9, 0x2b, 0xdc, 0x80, 0xce, 0x84, 0x28, 0x73, 0xd0, 0x16, 0x73, 0x81,
-	0x81, 0xa8, 0x07, 0x71, 0x9d, 0x8a, 0x3b, 0x0b, 0x59, 0x64, 0x79, 0x68, 0x44, 0xe3, 0x5a, 0x93,
-	0x19, 0x96, 0x4a, 0xa1, 0x3e, 0x88, 0x73, 0x29, 0x47, 0xde, 0x9a, 0x73, 0x2a, 0xc6, 0xc3, 0x63,
-	0x1a, 0xcb, 0xec, 0xe1, 0xb3, 0x3d, 0x52, 0xdb, 0x79, 0xb8, 0x90, 0x32, 0xcb, 0x16, 0x4e, 0xf5,
-	0x5c, 0xcb, 0x6e, 0xc1, 0xf2, 0xb9, 0x59, 0xe5, 0xc9, 0x3d, 0x93, 0x1d, 0x58, 0xbd, 0x70, 0x8b,
-	0xe5, 0x7d, 0x85, 0xcd, 0xa3, 0xd2, 0xe6, 0xc9, 0x09, 0xac, 0xbf, 0x2f, 0xec, 0x97, 0x3f, 0x30,
-	0x5f, 0x90, 0xe8, 0x31, 0x41, 0x92, 0x7d, 0xc0, 0x4f, 0xb3, 0xed, 0x73, 0x4a, 0x45, 0xa6, 0xa8,
-	0x2e, 0x13, 0x83, 0xb5, 0x63, 0xba, 0xe5, 0xd3, 0xd1, 0xf3, 0x39, 0x62, 0xe7, 0x35, 0x74, 0x5d,
-	0x2f, 0x76, 0xa1, 0x79, 0xf6, 0xb1, 0xd7, 0xc0, 0x18, 0x3a, 0x27, 0x8c, 0x9d, 0xb1, 0x5e, 0xb4,
-	0xf7, 0xbb, 0x0d, 0xf1, 0x89, 0x1e, 0xee, 0x19, 0x8a, 0xc2, 0x03, 0x58, 0xf0, 0x5f, 0x1a, 0xfc,
-	0xdf, 0x8f, 0x29, 0x7f, 0xdb, 0x06, 0x2f, 0xaa, 0x69, 0x77, 0xca, 0xa4, 0x81, 0xef, 0x20, 0x0e,
-	0x17, 0x07, 0x5f, 0xe6, 0x6d, 0x95, 0x8f, 0xc9, 0xa0, 0x5f, 0x2f, 0x14, 0x09, 0xe1, 0x42, 0x04,
-	0x42, 0xf5, 0xda, 0x04, 0x42, 0xed, 0xee, 0x24, 0x0d, 0x3c, 0x82, 0x38, 0xb8, 0x2c, 0x10, 0xaa,
-	0xb7, 0x21, 0x10, 0x6a, 0x86, 0x4c, 0x5a, 0xbf, 0x9a, 0x11, 0xee, 0x43, 0xc7, 0x9a, 0x0a, 0xd7,
-	0x7d, 0x5f, 0xd1, 0x62, 0x41, 0x80, 0xca, 0x6b, 0x4a, 0x1a, 0x78, 0x0c, 0xcb, 0x45, 0xeb, 0xe0,
-	0xc0, 0x77, 0xce, 0xf1, 0xd3, 0x13, 0x94, 0x03, 0x58, 0xf0, 0x66, 0x0d, 0xaf, 0xa0, 0x6c, 0xde,
-	0x27, 0x9e, 0x3d, 0x84, 0xa5, 0x82, 0xeb, 0xf0, 0x95, 0x6f, 0xac, 0x3b, 0xf1, 0x71, 0xc6, 0x55,
-	0xd7, 0x16, 0xde, 0xfe, 0x0d, 0x00, 0x00, 0xff, 0xff, 0x2f, 0xeb, 0xbf, 0xf6, 0xe9, 0x06, 0x00,
-	0x00,
+	// 492 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x93, 0xb1, 0x6f, 0xdb, 0x3a,
+	0x10, 0xc6, 0x2d, 0xc9, 0x52, 0xa2, 0x7b, 0x48, 0x9e, 0x4a, 0xa4, 0xad, 0xe0, 0x2e, 0x86, 0xd0,
+	0x02, 0x41, 0x07, 0x0f, 0xee, 0xd6, 0xa9, 0xa8, 0x11, 0x20, 0x45, 0x87, 0x14, 0x8c, 0xbb, 0x97,
+	0x71, 0x2e, 0x36, 0x1b, 0x89, 0x74, 0x45, 0xba, 0x80, 0x3b, 0x75, 0xec, 0xd8, 0xa1, 0x7f, 0x70,
+	0x41, 0x52, 0xa2, 0x25, 0x3b, 0x43, 0x87, 0x4c, 0xd2, 0x7d, 0x47, 0xfc, 0xbe, 0xbb, 0xe3, 0x11,
+	0x52, 0xb6, 0xe6, 0x93, 0x75, 0x2d, 0xb5, 0x24, 0xb1, 0xfd, 0x14, 0x5f, 0xe0, 0x74, 0x26, 0x85,
+	0xc0, 0x85, 0xa6, 0xf8, 0x6d, 0x83, 0x4a, 0x13, 0x02, 0x43, 0xc1, 0x2a, 0xcc, 0x83, 0x71, 0x70,
+	0x9e, 0x52, 0xfb, 0x4f, 0x72, 0x38, 0xfa, 0x8e, 0xb5, 0xe2, 0x52, 0xe4, 0xa1, 0x95, 0xdb, 0x90,
+	0x8c, 0xe1, 0xbf, 0x25, 0x0a, 0x54, 0x5c, 0xcd, 0x79, 0x85, 0x79, 0x34, 0x0e, 0xce, 0x23, 0xda,
+	0x95, 0x8a, 0x15, 0xfc, 0xef, 0x1d, 0xd4, 0x5a, 0x0a, 0x85, 0xe4, 0x0c, 0x62, 0x2d, 0xef, 0x51,
+	0x34, 0x1e, 0x2e, 0x20, 0xaf, 0x20, 0x51, 0x9a, 0xe9, 0x8d, 0xb2, 0x1e, 0xa7, 0xd3, 0x13, 0x57,
+	0xe9, 0xe4, 0xda, 0x8a, 0xb4, 0x49, 0x9a, 0x5a, 0x2a, 0x54, 0x8a, 0x2d, 0x9d, 0x5b, 0x4a, 0xdb,
+	0xb0, 0xf8, 0x19, 0x42, 0x36, 0x5b, 0x31, 0x2e, 0x2e, 0x91, 0xdd, 0xb6, 0xed, 0x8c, 0xe0, 0x78,
+	0x85, 0xec, 0xf6, 0xba, 0x94, 0xda, 0xda, 0x0d, 0xa9, 0x8f, 0xc9, 0x4b, 0x38, 0x31, 0xff, 0xef,
+	0x4b, 0xb9, 0xb8, 0xa7, 0x52, 0xea, 0xa6, 0xb9, 0xbe, 0x68, 0x4e, 0xdd, 0x71, 0xc1, 0x4a, 0xfe,
+	0x03, 0x1d, 0x26, 0xb2, 0x98, 0xbe, 0x48, 0x26, 0x40, 0xbc, 0xb0, 0x03, 0x0e, 0x2d, 0xf0, 0x81,
+	0x8c, 0xa1, 0x7e, 0xdd, 0x28, 0xcd, 0xef, 0x78, 0x43, 0x8d, 0x1d, 0xb5, 0x27, 0x1a, 0xaa, 0x17,
+	0x76, 0xd4, 0xc4, 0x51, 0x0f, 0x33, 0xc5, 0x1c, 0x9e, 0x74, 0x26, 0xd0, 0x8c, 0x7b, 0x37, 0xd8,
+	0xe0, 0x1f, 0x07, 0x1b, 0xf6, 0x07, 0x4b, 0x20, 0xbb, 0x44, 0x56, 0xeb, 0x1b, 0x64, 0xed, 0x9a,
+	0x18, 0xa7, 0x8e, 0xf6, 0x58, 0x4e, 0x7f, 0x02, 0xc8, 0xe6, 0x58, 0x62, 0x85, 0xba, 0xde, 0xb6,
+	0x57, 0x78, 0x06, 0xf1, 0x1a, 0xb1, 0x76, 0xd0, 0x88, 0xba, 0xc0, 0x40, 0xd4, 0x56, 0x2c, 0xb8,
+	0x58, 0x5a, 0xc8, 0x31, 0x6d, 0x43, 0x33, 0x34, 0xa6, 0x35, 0x1a, 0x33, 0x2e, 0x85, 0xfa, 0x20,
+	0x3e, 0x49, 0x59, 0x36, 0xab, 0xf9, 0x40, 0xc6, 0xec, 0x70, 0x85, 0x95, 0xac, 0xb7, 0x9f, 0x6d,
+	0x49, 0x43, 0xb7, 0xc3, 0x1d, 0xc9, 0x34, 0xdb, 0xa9, 0xea, 0x91, 0x9a, 0x7d, 0xfd, 0x02, 0x12,
+	0x77, 0x96, 0x24, 0x10, 0x5e, 0x7d, 0xcc, 0x06, 0x24, 0x85, 0xf8, 0x82, 0xd2, 0x2b, 0x9a, 0x05,
+	0xd3, 0xdf, 0x21, 0xa4, 0x17, 0x7a, 0x35, 0x35, 0x14, 0x45, 0xde, 0xc2, 0x51, 0xf3, 0x88, 0xc8,
+	0xd3, 0xc6, 0xa6, 0xff, 0x6c, 0x47, 0xcf, 0xf6, 0x65, 0x57, 0x65, 0x31, 0x20, 0xef, 0x20, 0xf5,
+	0x3b, 0x41, 0x9e, 0xb7, 0xc7, 0xf6, 0xde, 0xc9, 0x28, 0x3f, 0x4c, 0x74, 0x09, 0xfe, 0xae, 0x3d,
+	0x61, 0x7f, 0x23, 0x3c, 0xe1, 0x60, 0x2d, 0x8a, 0x01, 0x99, 0x41, 0xea, 0x07, 0xe8, 0x09, 0xfb,
+	0x17, 0xed, 0x09, 0x07, 0xb3, 0x2e, 0xa2, 0x5f, 0x61, 0x70, 0x93, 0xd8, 0xec, 0x9b, 0xbf, 0x01,
+	0x00, 0x00, 0xff, 0xff, 0xf3, 0xfb, 0xca, 0xb3, 0xc6, 0x04, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -757,10 +541,6 @@ type Eth2StatsClient interface {
 	//
 	// Deprecated: Do not use.
 	Telemetry(ctx context.Context, in *TelemetryRequest, opts ...grpc.CallOption) (*TelemetryResponse, error)
-	Peers(ctx context.Context, in *PeersRequest, opts ...grpc.CallOption) (*DefaultResponse, error)
-	Attestations(ctx context.Context, in *AttestationsRequest, opts ...grpc.CallOption) (*DefaultResponse, error)
-	Syncing(ctx context.Context, in *SyncingRequest, opts ...grpc.CallOption) (*DefaultResponse, error)
-	MemoryUsage(ctx context.Context, in *MemoryUsageRequest, opts ...grpc.CallOption) (*DefaultResponse, error)
 }
 
 type eth2StatsClient struct {
@@ -808,42 +588,6 @@ func (c *eth2StatsClient) Telemetry(ctx context.Context, in *TelemetryRequest, o
 	return out, nil
 }
 
-func (c *eth2StatsClient) Peers(ctx context.Context, in *PeersRequest, opts ...grpc.CallOption) (*DefaultResponse, error) {
-	out := new(DefaultResponse)
-	err := c.cc.Invoke(ctx, "/proto.Eth2stats/Peers", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *eth2StatsClient) Attestations(ctx context.Context, in *AttestationsRequest, opts ...grpc.CallOption) (*DefaultResponse, error) {
-	out := new(DefaultResponse)
-	err := c.cc.Invoke(ctx, "/proto.Eth2stats/Attestations", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *eth2StatsClient) Syncing(ctx context.Context, in *SyncingRequest, opts ...grpc.CallOption) (*DefaultResponse, error) {
-	out := new(DefaultResponse)
-	err := c.cc.Invoke(ctx, "/proto.Eth2stats/Syncing", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *eth2StatsClient) MemoryUsage(ctx context.Context, in *MemoryUsageRequest, opts ...grpc.CallOption) (*DefaultResponse, error) {
-	out := new(DefaultResponse)
-	err := c.cc.Invoke(ctx, "/proto.Eth2stats/MemoryUsage", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // Eth2StatsServer is the server API for Eth2Stats service.
 type Eth2StatsServer interface {
 	Connect(context.Context, *ConnectRequest) (*ConnectResponse, error)
@@ -852,10 +596,6 @@ type Eth2StatsServer interface {
 	//
 	// Deprecated: Do not use.
 	Telemetry(context.Context, *TelemetryRequest) (*TelemetryResponse, error)
-	Peers(context.Context, *PeersRequest) (*DefaultResponse, error)
-	Attestations(context.Context, *AttestationsRequest) (*DefaultResponse, error)
-	Syncing(context.Context, *SyncingRequest) (*DefaultResponse, error)
-	MemoryUsage(context.Context, *MemoryUsageRequest) (*DefaultResponse, error)
 }
 
 // UnimplementedEth2StatsServer can be embedded to have forward compatible implementations.
@@ -873,18 +613,6 @@ func (*UnimplementedEth2StatsServer) Heartbeat(ctx context.Context, req *Heartbe
 }
 func (*UnimplementedEth2StatsServer) Telemetry(ctx context.Context, req *TelemetryRequest) (*TelemetryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Telemetry not implemented")
-}
-func (*UnimplementedEth2StatsServer) Peers(ctx context.Context, req *PeersRequest) (*DefaultResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Peers not implemented")
-}
-func (*UnimplementedEth2StatsServer) Attestations(ctx context.Context, req *AttestationsRequest) (*DefaultResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Attestations not implemented")
-}
-func (*UnimplementedEth2StatsServer) Syncing(ctx context.Context, req *SyncingRequest) (*DefaultResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Syncing not implemented")
-}
-func (*UnimplementedEth2StatsServer) MemoryUsage(ctx context.Context, req *MemoryUsageRequest) (*DefaultResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method MemoryUsage not implemented")
 }
 
 func RegisterEth2StatsServer(s *grpc.Server, srv Eth2StatsServer) {
@@ -963,78 +691,6 @@ func _Eth2Stats_Telemetry_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Eth2Stats_Peers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PeersRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(Eth2StatsServer).Peers(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.Eth2stats/Peers",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(Eth2StatsServer).Peers(ctx, req.(*PeersRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _Eth2Stats_Attestations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AttestationsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(Eth2StatsServer).Attestations(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.Eth2stats/Attestations",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(Eth2StatsServer).Attestations(ctx, req.(*AttestationsRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _Eth2Stats_Syncing_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SyncingRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(Eth2StatsServer).Syncing(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.Eth2stats/Syncing",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(Eth2StatsServer).Syncing(ctx, req.(*SyncingRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _Eth2Stats_MemoryUsage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(MemoryUsageRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(Eth2StatsServer).MemoryUsage(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.Eth2stats/MemoryUsage",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(Eth2StatsServer).MemoryUsage(ctx, req.(*MemoryUsageRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 var _Eth2Stats_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "proto.Eth2stats",
 	HandlerType: (*Eth2StatsServer)(nil),
@@ -1054,22 +710,6 @@ var _Eth2Stats_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Telemetry",
 			Handler:    _Eth2Stats_Telemetry_Handler,
-		},
-		{
-			MethodName: "Peers",
-			Handler:    _Eth2Stats_Peers_Handler,
-		},
-		{
-			MethodName: "Attestations",
-			Handler:    _Eth2Stats_Attestations_Handler,
-		},
-		{
-			MethodName: "Syncing",
-			Handler:    _Eth2Stats_Syncing_Handler,
-		},
-		{
-			MethodName: "MemoryUsage",
-			Handler:    _Eth2Stats_MemoryUsage_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
