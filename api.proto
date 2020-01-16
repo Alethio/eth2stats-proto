@@ -6,7 +6,10 @@ service Eth2stats {
     rpc Connect (ConnectRequest) returns (ConnectResponse) {}
     rpc ChainHead (ChainHeadRequest) returns (ChainHeadResponse) {}
     rpc Heartbeat (HeartbeatRequest) returns (HeartbeatResponse) {}
-    rpc Telemetry (TelemetryRequest) returns (TelemetryResponse) {}
+
+    rpc Telemetry (TelemetryRequest) returns (TelemetryResponse) {
+        option deprecated = true;
+    }
 }
 
 message ConnectRequest {
