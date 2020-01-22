@@ -18,6 +18,8 @@ message ConnectRequest {
 
     // Genesis time unix format
     int64 genesisTime = 3;
+
+    string eth2statsVersion = 4;
 }
 
 enum Status {
